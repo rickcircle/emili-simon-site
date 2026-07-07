@@ -2,7 +2,7 @@ backend:
   name: github
   repo: rickcircle/emili-simon-site
   branch: main
-  base_url: https://emilisimon.com
+  base_url: https://emili-simon-site.vercel.app
   auth_endpoint: /api/auth
 
 media_folder: public/uploads
