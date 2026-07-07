@@ -29,33 +29,12 @@ a:hover { color: #f2e6da; }
   width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid #b23a48;
 }
 
-/* === LEBEGŐ PARÁZS === */
-.embers { position: fixed; inset: 0; z-index: 250; pointer-events: none; overflow: hidden; }
-.ember { position: absolute; bottom: -10px; width: 3px; height: 3px; border-radius: 50%; background: radial-gradient(circle, #e8a35c 0%, transparent 70%); opacity: 0; animation: emberFloat linear infinite; }
-.ember:nth-child(1) { left: 4%; animation-delay: 0s; animation-duration: 17s; }
-.ember:nth-child(2) { left: 13%; animation-delay: 3s; animation-duration: 13s; }
-.ember:nth-child(3) { left: 24%; animation-delay: 6s; animation-duration: 19s; }
-.ember:nth-child(4) { left: 35%; animation-delay: 1s; animation-duration: 15s; }
-.ember:nth-child(5) { left: 47%; animation-delay: 8s; animation-duration: 21s; }
-.ember:nth-child(6) { left: 58%; animation-delay: 4s; animation-duration: 14s; }
-.ember:nth-child(7) { left: 69%; animation-delay: 10s; animation-duration: 18s; }
-.ember:nth-child(8) { left: 78%; animation-delay: 2s; animation-duration: 16s; }
-.ember:nth-child(9) { left: 88%; animation-delay: 7s; animation-duration: 20s; }
-.ember:nth-child(10) { left: 95%; animation-delay: 5s; animation-duration: 12s; }
-@keyframes emberFloat {
-  0% { transform: translateY(0) translateX(0); opacity: 0; }
-  8% { opacity: 0.65; }
-  50% { transform: translateY(-55vh) translateX(18px); opacity: 0.35; }
-  92% { opacity: 0.15; }
-  100% { transform: translateY(-100vh) translateX(-12px); opacity: 0; }
-}
-
-/* === GRAIN + VIGNETTE (Tim Burton hangulat) === */
+/* === GRAIN + VIGNETTE (finom) === */
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: 300; pointer-events: none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.05;
+  opacity: 0.025;
   mix-blend-mode: overlay;
 }
 body::after {
@@ -190,7 +169,11 @@ main { padding-top: 0; }
 .section-alt::before { background: #251e1d; }
 .section-header { margin-bottom: 4rem; }
 .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.06em; color: #c98a93; margin-bottom: 0.75rem; }
-.section-label::before { content: '\2766'; color: #b23a48; font-size: 1.1rem; font-style: normal; }
+.section-label::before {
+  content: '';
+  width: 13px; height: 13px; flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c1 3 3 5 6 6-3 1-5 3-6 6-1-3-3-5-6-6 3-1 5-3 6-6z' fill='%23b23a48'/%3E%3C/svg%3E") no-repeat center/contain;
+}
 .chapter-num { color: #b23a48; font-style: normal; }
 .chapter-num::after { content: '.'; margin-right: 0.4em; }
 .section-title { font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 1rem; color: #f2e6da; position: relative; padding-bottom: 1.25rem; }
@@ -226,18 +209,26 @@ main { padding-top: 0; }
 .about-image::after { bottom: -20px; right: -20px; transform: rotate(180deg); }
 .about-text p { color: #a89d92; }
 
-/* === WRITING (tartalomjegyzék lista) === */
-.toc-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
-.toc-item {
-  display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.85rem;
-  padding: 1.1rem 0; border-bottom: 1px solid rgba(178,58,72,0.15);
+/* === WRITING (folio lista) === */
+.folio-list { display: flex; flex-direction: column; margin-top: 1rem; }
+.folio-item {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1.75rem 0; border-bottom: 1px solid rgba(178,58,72,0.15);
   transition: padding-left 0.25s ease, border-color 0.25s ease;
 }
-.toc-item:hover { padding-left: 0.75rem; border-color: rgba(178,58,72,0.4); }
-.toc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #f2e6da; }
-.toc-leader { flex: 1; min-width: 2rem; border-bottom: 1px dotted #4a413c; transform: translateY(-8px); }
-.toc-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: #b23a48; white-space: nowrap; }
-.toc-desc { flex-basis: 100%; font-family: 'Lato', sans-serif; font-size: 0.88rem; color: #8a8079; margin-top: 0.4rem; }
+.folio-item:first-child { border-top: 1px solid rgba(178,58,72,0.15); }
+.folio-item:hover { padding-left: 0.75rem; border-color: rgba(178,58,72,0.4); }
+.folio-num {
+  font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 2.75rem; line-height: 1;
+  color: rgba(178,58,72,0.35); flex-shrink: 0; width: 3.2rem;
+}
+.folio-body { flex: 1; min-width: 0; }
+.folio-title { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #f2e6da; }
+.folio-desc { display: block; font-family: 'Lato', sans-serif; font-size: 0.88rem; color: #8a8079; margin-top: 0.4rem; }
+.folio-tag {
+  flex-shrink: 0; font-family: 'Lato', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #b23a48; border: 1px solid rgba(178,58,72,0.4); border-radius: 2px; padding: 0.4rem 0.8rem;
+}
 
 /* === QUOTES (editoriális, kiemelt idézet) === */
 .featured-quote {
@@ -328,7 +319,9 @@ main { padding-top: 0; }
 @media (max-width: 640px) {
   .site-nav { display: none; }
   .hamburger { display: flex; }
-  .toc-title { font-size: 1.25rem; }
+  .folio-item { gap: 1rem; }
+  .folio-num { font-size: 2rem; width: 2.2rem; }
+  .folio-title { font-size: 1.2rem; }
   .hero-title { font-size: 3.5rem; }
   .section { padding: 4rem 0; }
   .quote-row { grid-template-columns: 1fr; }

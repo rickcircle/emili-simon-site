@@ -10,16 +10,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ReadingRibbon from './components/ReadingRibbon';
 
-function Embers() {
-  return (
-    <div className="embers" aria-hidden="true">
-      {Array.from({ length: 10 }).map((_, i) => (
-        <span className="ember" key={i}></span>
-      ))}
-    </div>
-  );
-}
-
 function App() {
   useEffect(() => {
     const revealElements = document.querySelectorAll('.reveal');
@@ -37,7 +27,6 @@ function App() {
 
   return (
     <LanguageProvider>
-      <Embers />
       <ReadingRibbon />
       <Header />
       <main>

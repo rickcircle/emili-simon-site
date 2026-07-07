@@ -31,13 +31,15 @@ export default function Writing() {
           <h2 className="section-title">{t.writing_title}</h2>
           <p className="section-text">{t.writing_sub}</p>
         </div>
-        <div className="toc-list reveal">
-          {pieces.map((piece) => (
-            <a className="toc-item" key={piece.file} href={piece.file} target="_blank" rel="noopener noreferrer">
-              <span className="toc-title">{piece.title}</span>
-              <span className="toc-leader"></span>
-              <span className="toc-tag">{piece.tag}</span>
-              <span className="toc-desc">{piece.description}</span>
+        <div className="folio-list reveal">
+          {pieces.map((piece, i) => (
+            <a className="folio-item" key={piece.file} href={piece.file} target="_blank" rel="noopener noreferrer">
+              <span className="folio-num">{String(i + 1).padStart(2, '0')}</span>
+              <span className="folio-body">
+                <span className="folio-title">{piece.title}</span>
+                <span className="folio-desc">{piece.description}</span>
+              </span>
+              <span className="folio-tag">{piece.tag}</span>
             </a>
           ))}
         </div>
