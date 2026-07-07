@@ -5,24 +5,21 @@ export default function Footer() {
 
   return (
     <footer className="site-footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-col">
-            <h4 className="footer-logo">Emili Simon</h4>
-            <p>{t.footer_tagline}</p>
-          </div>
-          <div className="footer-col">
-            <h4>{t.footer_contact}</h4>
-            <p><a href="mailto:hello@emilisimon.com">hello@emilisimon.com</a></p>
-          </div>
-          <div className="footer-col">
-            <h4>{t.footer_follow}</h4>
-            <p><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            <p><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-          </div>
+      <div className="container colophon">
+        <div className="colophon-seal">E</div>
+        <div className="hero-rule"></div>
+        <h4 className="footer-logo">Emili Simon</h4>
+        <p className="colophon-tagline">{t.footer_tagline}</p>
+        <div className="colophon-links">
+          <a href="mailto:hello@emilisimon.com">hello@emilisimon.com</a>
+          <span className="colophon-sep">&middot;</span>
+          <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <span className="colophon-sep">&middot;</span>
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
+        <p className="colophon-note">{t.footer_colophon}</p>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Emili Simon — {t.footer_built} <a href="https://richardkormendi.com">Richard Körmendi</a></p>
+          <p>&copy; {new Date().getFullYear()} Emili Simon &mdash; {t.footer_built} <a href="https://richardkormendi.com">Richard Körmendi</a></p>
         </div>
       </div>
     </footer>

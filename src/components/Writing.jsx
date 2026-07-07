@@ -27,7 +27,7 @@ export default function Writing() {
     <section className="section section-alt" id="writing">
       <div className="container">
         <div className="section-header reveal">
-          <span className="section-label">{t.writing_label}</span>
+          <span className="section-label"><span className="chapter-num">II</span>{t.writing_label}</span>
           <h2 className="section-title">{t.writing_title}</h2>
           <p className="section-text">{t.writing_sub}</p>
         </div>

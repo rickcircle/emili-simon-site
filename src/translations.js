@@ -46,6 +46,7 @@ export const translations = {
     footer_tagline: 'English Teacher & Writer',
     footer_contact: 'Contact',
     footer_follow: 'Follow',
+    footer_colophon: 'Set in Cormorant Garamond & Lato.',
     footer_built: 'site by',
   },
 
@@ -96,6 +97,7 @@ export const translations = {
     footer_tagline: 'Angol Tanár és Író',
     footer_contact: 'Kapcsolat',
     footer_follow: 'Kövess',
+    footer_colophon: 'Cormorant Garamond és Lato betűtípusokkal szedve.',
     footer_built: 'készítette:',
   },
 };

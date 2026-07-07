@@ -8,6 +8,7 @@ import Quotes from './components/Quotes';
 import Travel from './components/Travel';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ReadingRibbon from './components/ReadingRibbon';
 
 function Embers() {
   return (
@@ -37,6 +38,7 @@ function App() {
   return (
     <LanguageProvider>
       <Embers />
+      <ReadingRibbon />
       <Header />
       <main>
         <Hero />

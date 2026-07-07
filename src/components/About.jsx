@@ -12,7 +12,7 @@ export default function About() {
             <p className="marginalia">{t.about_marginalia}</p>
           </div>
           <div className="about-text">
-            <span className="section-label">{t.about_label}</span>
+            <span className="section-label"><span className="chapter-num">I</span>{t.about_label}</span>
             <h2 className="section-title">{t.about_title}</h2>
             <p className="drop-cap">{t.about_text1}</p>
             <p style={{ marginTop: '1rem' }}>{t.about_text2}</p>

@@ -7,7 +7,7 @@ export default function Quotes() {
     <section className="section" id="quotes">
       <div className="container">
         <div className="section-header reveal">
-          <span className="section-label">{t.quotes_label}</span>
+          <span className="section-label"><span className="chapter-num">III</span>{t.quotes_label}</span>
           <h2 className="section-title">{t.quotes_title}</h2>
         </div>
         <div className="featured-quote reveal">

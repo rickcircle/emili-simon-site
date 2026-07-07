@@ -28,7 +28,7 @@ export default function Contact() {
     <section className="section section-alt" id="contact">
       <div className="container">
         <div className="section-header reveal">
-          <span className="section-label">{t.contact_label}</span>
+          <span className="section-label"><span className="chapter-num">V</span>{t.contact_label}</span>
           <h2 className="section-title">{t.contact_title}</h2>
           <p className="section-text">{t.contact_sub}</p>
         </div>

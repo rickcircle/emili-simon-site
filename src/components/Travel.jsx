@@ -23,7 +23,7 @@ export default function Travel() {
     <section className="section section-alt" id="travel">
       <div className="container">
         <div className="section-header reveal">
-          <span className="section-label">{t.travel_label}</span>
+          <span className="section-label"><span className="chapter-num">IV</span>{t.travel_label}</span>
           <h2 className="section-title">{t.travel_title}</h2>
           <p className="section-text">{t.travel_sub}</p>
         </div>

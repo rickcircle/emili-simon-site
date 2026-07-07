@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
+
+const NAV_IDS = ['about', 'writing', 'quotes', 'travel', 'contact'];
 
 export default function Header() {
   const { lang, setLang, t } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('');
 
   const links = [
     ['#about', t.nav_about],
@@ -13,6 +16,20 @@ export default function Header() {
     ['#contact', t.nav_contact],
   ];
 
+  useEffect(() => {
+    const sections = NAV_IDS.map((id) => document.getElementById(id)).filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="site-header">
       <div className="container">
@@ -20,7 +37,7 @@ export default function Header() {
 
         <nav className="site-nav">
           {links.map(([href, label]) => (
-            <a key={href} href={href}>{label}</a>
+            <a key={href} href={href} className={active === href ? 'active' : ''}>{label}</a>
           ))}
         </nav>
 
