@@ -10,10 +10,13 @@ export default function Quotes() {
           <span className="section-label">{t.quotes_label}</span>
           <h2 className="section-title">{t.quotes_title}</h2>
         </div>
-        <div className="gallery-grid reveal">
-          <div className="gallery-item g1">&ldquo;{t.quote1}&rdquo;</div>
-          <div className="gallery-item g2">&ldquo;{t.quote2}&rdquo;</div>
-          <div className="gallery-item g3">&ldquo;{t.quote3}&rdquo;</div>
+        <div className="featured-quote reveal">
+          <span className="quote-mark">&ldquo;</span>
+          <p>{t.quote1}</p>
+        </div>
+        <div className="quote-row reveal">
+          <div className="quote-card">&ldquo;{t.quote2}&rdquo;</div>
+          <div className="quote-card">&ldquo;{t.quote3}&rdquo;</div>
         </div>
       </div>
     </section>

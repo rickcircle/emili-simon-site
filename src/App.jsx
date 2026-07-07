@@ -5,8 +5,19 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Writing from './components/Writing';
 import Quotes from './components/Quotes';
+import Travel from './components/Travel';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+function Embers() {
+  return (
+    <div className="embers" aria-hidden="true">
+      {Array.from({ length: 10 }).map((_, i) => (
+        <span className="ember" key={i}></span>
+      ))}
+    </div>
+  );
+}
 
 function App() {
   useEffect(() => {
@@ -25,12 +36,14 @@ function App() {
 
   return (
     <LanguageProvider>
+      <Embers />
       <Header />
       <main>
         <Hero />
         <About />
         <Writing />
         <Quotes />
+        <Travel />
         <Contact />
       </main>
       <Footer />

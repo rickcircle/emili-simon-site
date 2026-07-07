@@ -3,6 +3,7 @@ export const translations = {
     nav_about: 'About',
     nav_writing: 'Writing',
     nav_quotes: 'Quotes',
+    nav_travel: 'On the Road',
     nav_contact: 'Contact',
 
     hero_badge: 'English Teacher & Writer',
@@ -27,6 +28,10 @@ export const translations = {
     quote2: "A second quote — from a favourite author, or a student's breakthrough moment.",
     quote3: 'A third quote — something that captures why you teach, or why you write.',
 
+    travel_label: 'Wanderlust',
+    travel_title: 'Emili on the Road',
+    travel_sub: 'Snapshots from the places that feed the stories — castles, coastlines, and everything in between.',
+
     contact_label: 'Get In Touch',
     contact_title: "Let's Talk",
     contact_sub: "Whether it's about lessons, writing, or collaboration — I'd love to hear from you.",
@@ -47,6 +52,7 @@ export const translations = {
     nav_about: 'Rólam',
     nav_writing: 'Írások',
     nav_quotes: 'Idézetek',
+    nav_travel: 'Útjaim',
     nav_contact: 'Kapcsolat',
 
     hero_badge: 'Angol Tanár és Író',
@@ -70,6 +76,10 @@ export const translations = {
     quote1: 'Cseréld ezt egy sorra a saját írásodból, vagy egy idézetre, amit szeretsz.',
     quote2: 'Egy második idézet — egy kedvenc szerzőtől, vagy egy diák áttörő pillanatától.',
     quote3: 'Egy harmadik idézet — valami, ami megragadja, miért tanítasz vagy miért írsz.',
+
+    travel_label: 'Utazási Vágy',
+    travel_title: 'Emili Útjai',
+    travel_sub: 'Pillanatképek azokból a helyekből, amik táplálják a történeteket — kastélyok, tengerpartok, és minden, ami közte van.',
 
     contact_label: 'Kapcsolatfelvétel',
     contact_title: 'Beszéljünk',

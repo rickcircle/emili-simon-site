@@ -6,9 +6,9 @@
 /* === ALAP === */
 body {
   font-family: 'Lato', sans-serif;
-  background: #0f0c0d;
+  background: #171214;
   color: #cabfb5;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 h1, h2, h3, h4 {
@@ -19,7 +19,28 @@ h1, h2, h3, h4 {
 a { color: #b23a48; text-decoration: none; transition: color 0.2s; }
 a:hover { color: #f2e6da; }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+/* === LEBEGŐ PARÁZS === */
+.embers { position: fixed; inset: 0; z-index: 250; pointer-events: none; overflow: hidden; }
+.ember { position: absolute; bottom: -10px; width: 3px; height: 3px; border-radius: 50%; background: radial-gradient(circle, #e8a35c 0%, transparent 70%); opacity: 0; animation: emberFloat linear infinite; }
+.ember:nth-child(1) { left: 4%; animation-delay: 0s; animation-duration: 17s; }
+.ember:nth-child(2) { left: 13%; animation-delay: 3s; animation-duration: 13s; }
+.ember:nth-child(3) { left: 24%; animation-delay: 6s; animation-duration: 19s; }
+.ember:nth-child(4) { left: 35%; animation-delay: 1s; animation-duration: 15s; }
+.ember:nth-child(5) { left: 47%; animation-delay: 8s; animation-duration: 21s; }
+.ember:nth-child(6) { left: 58%; animation-delay: 4s; animation-duration: 14s; }
+.ember:nth-child(7) { left: 69%; animation-delay: 10s; animation-duration: 18s; }
+.ember:nth-child(8) { left: 78%; animation-delay: 2s; animation-duration: 16s; }
+.ember:nth-child(9) { left: 88%; animation-delay: 7s; animation-duration: 20s; }
+.ember:nth-child(10) { left: 95%; animation-delay: 5s; animation-duration: 12s; }
+@keyframes emberFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  8% { opacity: 0.65; }
+  50% { transform: translateY(-55vh) translateX(18px); opacity: 0.35; }
+  92% { opacity: 0.15; }
+  100% { transform: translateY(-100vh) translateX(-12px); opacity: 0; }
+}
 
 /* === GRAIN + VIGNETTE (Tim Burton hangulat) === */
 body::before {
@@ -55,7 +76,7 @@ body::after {
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1.2rem 0;
-  background: rgba(10,8,9,0.9);
+  background: rgba(23,18,20,0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(178,58,72,0.2);
   transition: all 0.3s;
@@ -107,7 +128,7 @@ body::after {
 
 .mobile-menu {
   display: none; position: absolute; top: 100%; left: 0; right: 0;
-  background: rgba(10,8,9,0.98); border-bottom: 1px solid rgba(178,58,72,0.2);
+  background: rgba(23,18,20,0.97); border-bottom: 1px solid rgba(178,58,72,0.2);
   padding: 1.5rem 2rem; flex-direction: column; gap: 1.25rem;
 }
 .mobile-menu.open { display: flex; }
@@ -123,7 +144,7 @@ main { padding-top: 0; }
   position: relative;
   background:
     linear-gradient(180deg, rgba(6,5,6,0.55) 0%, rgba(6,5,6,0.75) 55%, rgba(6,5,6,0.95) 100%),
-    url('/images/hero-bg-gothic.jpg') center 30%/cover no-repeat fixed;
+    url('/images/hero-bg-gothic.jpg') center 30%/cover no-repeat;
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 2rem; }
@@ -141,23 +162,24 @@ main { padding-top: 0; }
 .btn-sm { padding: 0.55rem 1.4rem; font-size: 0.72rem; }
 
 /* === SECTIONS === */
-.section { padding: 6rem 0; background: #14100f; position: relative; }
-.section-alt { background: #1a1413; }
+.section { padding: 7rem 0; background: #1d1717; position: relative; }
+.section-alt { background: #251e1d; }
 .section::before {
   content: '';
   position: absolute; top: -13px; left: 0; right: 0; height: 26px;
-  background: #14100f;
+  background: #1d1717;
   clip-path: polygon(0% 100%, 3.5% 0%, 7% 100%, 10.5% 0%, 14% 100%, 17.5% 0%, 21% 100%, 24.5% 0%, 28% 100%, 31.5% 0%, 35% 100%, 38.5% 0%, 42% 100%, 45.5% 0%, 49% 100%, 52.5% 0%, 56% 100%, 59.5% 0%, 63% 100%, 66.5% 0%, 70% 100%, 73.5% 0%, 77% 100%, 80.5% 0%, 84% 100%, 87.5% 0%, 91% 100%, 94.5% 0%, 98% 100%, 100% 0%, 100% 100%);
   z-index: 2;
 }
-.section-alt::before { background: #1a1413; }
-.section-header { margin-bottom: 3.5rem; }
-.section-label { display: block; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: #b23a48; margin-bottom: 0.75rem; font-family: 'Lato', sans-serif; }
-.section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: #f2e6da; }
+.section-alt::before { background: #251e1d; }
+.section-header { margin-bottom: 4rem; }
+.section-label { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: #b23a48; margin-bottom: 0.9rem; font-family: 'Lato', sans-serif; }
+.section-label::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #e08a94, #8b1a2b); box-shadow: 0 0 8px rgba(178,58,72,0.6); }
+.section-title { font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 1rem; color: #f2e6da; }
 .section-text { font-size: 1rem; color: #948a83; max-width: 560px; }
 
 /* === ABOUT === */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5.5rem; align-items: center; }
 .about-image {
   height: 520px; border-radius: 2px; position: relative;
   background:
@@ -165,11 +187,19 @@ main { padding-top: 0; }
     url('/images/emili_main.jpeg') center 20%/cover no-repeat;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
+.about-image::before, .about-image::after {
+  content: '';
+  position: absolute; width: 68px; height: 68px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M5 95 C5 60 5 20 40 10 C55 5 70 15 65 30 C60 45 40 40 42 25 C44 12 60 8 75 15' fill='none' stroke='%23cf6a78' stroke-width='2.5'/%3E%3Ccircle cx='75' cy='15' r='3.5' fill='%23cf6a78'/%3E%3C/svg%3E") no-repeat center/contain;
+  opacity: 0.6; pointer-events: none;
+}
+.about-image::before { top: -20px; left: -20px; }
+.about-image::after { bottom: -20px; right: -20px; transform: rotate(180deg); }
 .about-text p { color: #a89d92; }
 
 /* === WRITING === */
 .rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.room-card { background: #1a1413; border-radius: 2px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.4); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid rgba(178,58,72,0.12); }
+.room-card { background: #221b1a; border-radius: 2px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.4); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid rgba(178,58,72,0.12); }
 .room-card:hover { transform: translateY(-6px) rotate(-1deg); box-shadow: 0 12px 44px rgba(0,0,0,0.55); }
 .room-card:nth-child(2):hover { transform: translateY(-6px) rotate(1deg); }
 .room-card:nth-child(3):hover { transform: translateY(-6px) rotate(-1.3deg); }
@@ -183,25 +213,43 @@ main { padding-top: 0; }
 .room-footer { display: flex; justify-content: space-between; align-items: center; }
 .room-price { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #cf6a78; font-style: italic; }
 
-/* === QUOTES === */
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.gallery-item {
-  border-radius: 2px; padding: 2.5rem 2rem; min-height: 220px;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem;
-  color: #f2e6da;
-  border: 1px solid rgba(178,58,72,0.18);
-  transition: transform 0.3s ease;
-}
-.gallery-item:hover { transform: rotate(-1deg) scale(1.02); }
-.gallery-item:nth-child(2):hover { transform: rotate(1deg) scale(1.02); }
-.g1 { background: linear-gradient(135deg, #1a1413, #3a0f16); }
-.g2 {
+/* === QUOTES (editoriális, kiemelt idézet) === */
+.featured-quote {
+  position: relative; max-width: 780px; margin: 0 auto 2.5rem; text-align: center;
+  padding: 3.5rem 2.5rem; border-radius: 4px; overflow: hidden;
   background:
-    linear-gradient(160deg, rgba(10,8,9,0.35), rgba(10,8,9,0.75)),
-    url('/images/about-photo.jpg') center 25%/cover no-repeat;
+    linear-gradient(rgba(23,18,20,0.9), rgba(23,18,20,0.95)),
+    url('/images/about-photo.jpg') center 30%/cover no-repeat;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
-.g3 { background: linear-gradient(135deg, #241417, #4a2a2e); }
+.featured-quote .quote-mark {
+  display: block; font-size: 6rem; line-height: 1; color: rgba(178,58,72,0.5);
+  font-family: 'Cormorant Garamond', serif; margin-bottom: -1.5rem;
+}
+.featured-quote p {
+  position: relative; font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-size: clamp(1.4rem, 2.6vw, 2rem); color: #f5ece1; line-height: 1.5;
+}
+.quote-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 780px; margin: 0 auto; }
+.quote-card {
+  background: #221b1a; border: 1px solid rgba(178,58,72,0.18); border-radius: 2px;
+  padding: 1.85rem; text-align: center; transition: transform 0.3s ease;
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.02rem; color: #cabfb5;
+}
+.quote-card:hover { transform: translateY(-4px) rotate(-1deg); }
+.quote-card:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
+
+/* === ON THE ROAD (utazás galéria) === */
+.travel-grid { column-count: 3; column-gap: 1.75rem; }
+.travel-photo {
+  break-inside: avoid; margin-bottom: 1.75rem; background: #f2e6da; padding: 10px 10px 26px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45); transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.travel-photo img { width: 100%; display: block; }
+.travel-grid .travel-photo:nth-child(3n+1) { transform: rotate(-2deg); }
+.travel-grid .travel-photo:nth-child(3n+2) { transform: rotate(1.5deg); }
+.travel-grid .travel-photo:nth-child(3n) { transform: rotate(-1deg); }
+.travel-photo:hover { transform: rotate(0deg) scale(1.035); box-shadow: 0 18px 44px rgba(0,0,0,0.55); position: relative; z-index: 5; }
 
 /* === CONTACT FORM === */
 .booking-form { max-width: 620px; margin-top: 2.5rem; }
@@ -214,7 +262,7 @@ main { padding-top: 0; }
   border-radius: 2px;
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
-  background: #1a1413;
+  background: #221b1a;
   color: #e8e0d5;
   transition: border-color 0.2s;
   width: 100%;
@@ -223,10 +271,10 @@ main { padding-top: 0; }
 .form-group textarea::placeholder { color: #5c5349; }
 .form-group input:focus,
 .form-group textarea:focus { outline: none; border-color: #b23a48; }
-.form-success { background: #1a1413; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #a89d92; }
+.form-success { background: #221b1a; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #a89d92; }
 
 /* === FOOTER === */
-.site-footer { background: #0a0808; color: #877d76; padding: 4rem 0 2rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
+.site-footer { background: #120e0f; color: #877d76; padding: 4rem 0 2rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
 .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 3rem; }
 .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: #cf6a78; margin-bottom: 1rem; }
 .footer-col h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #ddd; margin-bottom: 1rem; font-weight: 400; letter-spacing: 0.05em; }
@@ -239,10 +287,10 @@ main { padding-top: 0; }
 /* === RESZPONZÍV === */
 @media (max-width: 900px) {
   .rooms-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-image { height: 300px; }
+  .travel-grid { column-count: 2; }
 }
 
 @media (max-width: 640px) {
@@ -252,5 +300,6 @@ main { padding-top: 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 3.5rem; }
   .section { padding: 4rem 0; }
-  .hero { background-attachment: scroll; }
+  .quote-row { grid-template-columns: 1fr; }
+  .travel-grid { column-count: 1; }
 }

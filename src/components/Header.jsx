@@ -9,6 +9,7 @@ export default function Header() {
     ['#about', t.nav_about],
     ['#writing', t.nav_writing],
     ['#quotes', t.nav_quotes],
+    ['#travel', t.nav_travel],
     ['#contact', t.nav_contact],
   ];
 
