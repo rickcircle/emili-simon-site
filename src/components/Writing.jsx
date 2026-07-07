@@ -20,8 +20,6 @@ const pieces = Object.values(files)
   .map(parseFrontmatter)
   .sort((a, b) => Number(a.order) - Number(b.order));
 
-const tileClass = ['room-image-1', 'room-image-2', 'room-image-3'];
-
 export default function Writing() {
   const { t } = useLanguage();
 
@@ -33,19 +31,14 @@ export default function Writing() {
           <h2 className="section-title">{t.writing_title}</h2>
           <p className="section-text">{t.writing_sub}</p>
         </div>
-        <div className="rooms-grid">
-          {pieces.map((piece, i) => (
-            <div className="room-card reveal" key={piece.file}>
-              <div className={`room-image ${tileClass[i % tileClass.length]}`}></div>
-              <div className="room-body">
-                <h3 className="room-name">{piece.title}</h3>
-                <p className="room-desc">{piece.description}</p>
-                <div className="room-footer">
-                  <span className="room-price">{piece.tag}</span>
-                  <a href={piece.file} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">{t.piece_read}</a>
-                </div>
-              </div>
-            </div>
+        <div className="toc-list reveal">
+          {pieces.map((piece) => (
+            <a className="toc-item" key={piece.file} href={piece.file} target="_blank" rel="noopener noreferrer">
+              <span className="toc-title">{piece.title}</span>
+              <span className="toc-leader"></span>
+              <span className="toc-tag">{piece.tag}</span>
+              <span className="toc-desc">{piece.description}</span>
+            </a>
           ))}
         </div>
       </div>

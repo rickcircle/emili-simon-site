@@ -16,6 +16,7 @@ export const translations = {
     about_text1: "Emili Simon is a fantasy, horror, and romantic comedy writer who practiced her way into writing novels through fanfictions and essays. She's endlessly fond of the English language, in love with English, American, Scottish, and Irish culture and literature, and always up for a good linguistics pun. Her favorites are morally grey, misunderstood characters, strange outcasts, and fiercely independent individuals.",
     about_text2: "When she isn't studying at university, she's grabbing a backpack and getting on a plane — or working off the cookies and pumpkin spice lattes of a desk-bound week at barre class.",
     about_btn: 'Say Hello',
+    about_marginalia: 'marginalia — always up for a good linguistics pun',
 
     writing_label: 'Portfolio',
     writing_title: 'Selected Writing',
@@ -65,6 +66,7 @@ export const translations = {
     about_text1: 'Simon Emili fantasy, horror és romantikus vígjáték író, aki fanfictionökön és esszéken keresztül gyakorolta be magát a regényírásba. Végtelenül szereti az angol nyelvet, szerelmes az angol, amerikai, skót és ír kultúrába és irodalomba, és mindig nyitott egy jó nyelvi szóviccre. Kedvencei az erkölcsileg szürke, félreértett karakterek, a különc kívülállók és a szenvedélyesen független egyéniségek.',
     about_text2: 'Amikor épp nem az egyetemen tanul, hátizsákot ragad és felszáll egy repülőre — vagy egy asztalhoz kötött hét sütijeit és tökös fűszeres lattéit dolgozza le egy barre órán.',
     about_btn: 'Írj nekem',
+    about_marginalia: 'margójegyzet — mindig nyitott egy jó nyelvi szóviccre',
 
     writing_label: 'Portfólió',
     writing_title: 'Válogatott írások',

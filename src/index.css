@@ -148,8 +148,9 @@ main { padding-top: 0; }
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 2rem; }
-.hero-badge { font-size: 0.75rem; letter-spacing: 0.35em; text-transform: uppercase; color: #c98a93; margin-bottom: 1.5rem; font-family: 'Lato', sans-serif; }
-.hero-title { font-size: clamp(4rem, 12vw, 8rem); font-weight: 300; letter-spacing: 0.05em; line-height: 1; margin-bottom: 1.5rem; color: #f5ece1; font-family: 'Cormorant Garamond', serif; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
+.hero-badge { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; letter-spacing: 0.08em; color: #c98a93; margin-bottom: 1.25rem; }
+.hero-title { font-size: clamp(4rem, 12vw, 8rem); font-weight: 300; letter-spacing: 0.05em; line-height: 1; margin-bottom: 0; color: #f5ece1; font-family: 'Cormorant Garamond', serif; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
+.hero-rule { width: 90px; height: 1px; background: #b23a48; margin: 1.75rem auto; }
 .hero-sub { font-size: 1rem; color: rgba(245,236,225,0.6); letter-spacing: 0.1em; margin-bottom: 2.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; }
 .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
@@ -173,10 +174,21 @@ main { padding-top: 0; }
 }
 .section-alt::before { background: #251e1d; }
 .section-header { margin-bottom: 4rem; }
-.section-label { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: #b23a48; margin-bottom: 0.9rem; font-family: 'Lato', sans-serif; }
-.section-label::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #e08a94, #8b1a2b); box-shadow: 0 0 8px rgba(178,58,72,0.6); }
-.section-title { font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 1rem; color: #f2e6da; }
+.section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.06em; color: #c98a93; margin-bottom: 0.75rem; }
+.section-label::before { content: '\2766'; color: #b23a48; font-size: 1.1rem; font-style: normal; }
+.section-title { font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 1rem; color: #f2e6da; position: relative; padding-bottom: 1.25rem; }
+.section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 70px; height: 1px; background: #b23a48; }
 .section-text { font-size: 1rem; color: #948a83; max-width: 560px; }
+
+/* === INICIÁLÉ + MARGINÁLIA === */
+.drop-cap::first-letter {
+  font-family: 'Cormorant Garamond', serif; font-size: 3.8rem; line-height: 0.7;
+  float: left; color: #b23a48; padding: 0.1rem 0.5rem 0 0;
+}
+.marginalia {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem;
+  color: #8a8079; margin-top: 0.85rem; padding-left: 0.75rem; border-left: 2px solid rgba(178,58,72,0.3);
+}
 
 /* === ABOUT === */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5.5rem; align-items: center; }
@@ -197,21 +209,18 @@ main { padding-top: 0; }
 .about-image::after { bottom: -20px; right: -20px; transform: rotate(180deg); }
 .about-text p { color: #a89d92; }
 
-/* === WRITING === */
-.rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-.room-card { background: #221b1a; border-radius: 2px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.4); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid rgba(178,58,72,0.12); }
-.room-card:hover { transform: translateY(-6px) rotate(-1deg); box-shadow: 0 12px 44px rgba(0,0,0,0.55); }
-.room-card:nth-child(2):hover { transform: translateY(-6px) rotate(1deg); }
-.room-card:nth-child(3):hover { transform: translateY(-6px) rotate(-1.3deg); }
-.room-image { height: 220px; }
-.room-image-1 { background: linear-gradient(135deg, #3a0f16, #8b1a2b); }
-.room-image-2 { background: linear-gradient(135deg, #1a1413, #4a2a2e); }
-.room-image-3 { background: linear-gradient(135deg, #0a0808, #3a3a3a); }
-.room-body { padding: 1.75rem; }
-.room-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 0.75rem; color: #f2e6da; }
-.room-desc { font-size: 0.9rem; color: #8a8079; margin-bottom: 1.5rem; }
-.room-footer { display: flex; justify-content: space-between; align-items: center; }
-.room-price { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #cf6a78; font-style: italic; }
+/* === WRITING (tartalomjegyzék lista) === */
+.toc-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+.toc-item {
+  display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.85rem;
+  padding: 1.1rem 0; border-bottom: 1px solid rgba(178,58,72,0.15);
+  transition: padding-left 0.25s ease, border-color 0.25s ease;
+}
+.toc-item:hover { padding-left: 0.75rem; border-color: rgba(178,58,72,0.4); }
+.toc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #f2e6da; }
+.toc-leader { flex: 1; min-width: 2rem; border-bottom: 1px dotted #4a413c; transform: translateY(-8px); }
+.toc-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: #b23a48; white-space: nowrap; }
+.toc-desc { flex-basis: 100%; font-family: 'Lato', sans-serif; font-size: 0.88rem; color: #8a8079; margin-top: 0.4rem; }
 
 /* === QUOTES (editoriális, kiemelt idézet) === */
 .featured-quote {
@@ -286,7 +295,6 @@ main { padding-top: 0; }
 
 /* === RESZPONZÍV === */
 @media (max-width: 900px) {
-  .rooms-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-image { height: 300px; }
@@ -296,8 +304,8 @@ main { padding-top: 0; }
 @media (max-width: 640px) {
   .site-nav { display: none; }
   .hamburger { display: flex; }
-  .rooms-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .toc-title { font-size: 1.25rem; }
   .hero-title { font-size: 3.5rem; }
   .section { padding: 4rem 0; }
   .quote-row { grid-template-columns: 1fr; }
