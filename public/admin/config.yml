@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: rickcircle/emili-simon-site
+  branch: main
+  base_url: https://emilisimon.com
+  auth_endpoint: /api/auth
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: writings
+    label: Writings
+    folder: content/writings
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - label: Tag
+        name: tag
+        widget: select
+        options: [Essay, Fiction, Poetry, Thesis]
+      - { label: File, name: file, widget: file }
+      - { label: Order, name: order, widget: number, default: 1 }

@@ -1,0 +1,89 @@
+export const translations = {
+  en: {
+    nav_about: 'About',
+    nav_writing: 'Writing',
+    nav_quotes: 'Quotes',
+    nav_contact: 'Contact',
+
+    hero_badge: 'English Teacher & Writer',
+    hero_sub: 'Wordsmith by trade, storyteller at heart.',
+    hero_btn1: 'See My Writing',
+    hero_btn2: 'Get In Touch',
+
+    about_label: 'About',
+    about_title: 'Meet Emili',
+    about_text1: "Emili Simon is a fantasy, horror, and romantic comedy writer who practiced her way into writing novels through fanfictions and essays. She's endlessly fond of the English language, in love with English, American, Scottish, and Irish culture and literature, and always up for a good linguistics pun. Her favorites are morally grey, misunderstood characters, strange outcasts, and fiercely independent individuals.",
+    about_text2: "When she isn't studying at university, she's grabbing a backpack and getting on a plane — or working off the cookies and pumpkin spice lattes of a desk-bound week at barre class.",
+    about_btn: 'Say Hello',
+
+    writing_label: 'Portfolio',
+    writing_title: 'Selected Writing',
+    writing_sub: 'Essays and academic work exploring the Gothic, the strange, and the stories that stay with us.',
+    piece_read: 'View',
+
+    quotes_label: 'Words I Live By',
+    quotes_title: 'A Few Favourite Lines',
+    quote1: 'Replace this with a line from your own writing, or a quote you love.',
+    quote2: "A second quote — from a favourite author, or a student's breakthrough moment.",
+    quote3: 'A third quote — something that captures why you teach, or why you write.',
+
+    contact_label: 'Get In Touch',
+    contact_title: "Let's Talk",
+    contact_sub: "Whether it's about lessons, writing, or collaboration — I'd love to hear from you.",
+    field_name: 'Full Name',
+    field_email: 'Email Address',
+    field_message: 'Message',
+    field_msg_ph: "Tell me a little about what you're reaching out for...",
+    btn_send: 'Send Message',
+    form_success: "Thank you for reaching out! I'll get back to you soon.",
+
+    footer_tagline: 'English Teacher & Writer',
+    footer_contact: 'Contact',
+    footer_follow: 'Follow',
+    footer_built: 'site by',
+  },
+
+  hu: {
+    nav_about: 'Rólam',
+    nav_writing: 'Írások',
+    nav_quotes: 'Idézetek',
+    nav_contact: 'Kapcsolat',
+
+    hero_badge: 'Angol Tanár és Író',
+    hero_sub: 'Szavakból élek — tanárként és íróként egyaránt.',
+    hero_btn1: 'Írásaim',
+    hero_btn2: 'Kapcsolatfelvétel',
+
+    about_label: 'Rólam',
+    about_title: 'Ismerd meg Emilit',
+    about_text1: 'Simon Emili fantasy, horror és romantikus vígjáték író, aki fanfictionökön és esszéken keresztül gyakorolta be magát a regényírásba. Végtelenül szereti az angol nyelvet, szerelmes az angol, amerikai, skót és ír kultúrába és irodalomba, és mindig nyitott egy jó nyelvi szóviccre. Kedvencei az erkölcsileg szürke, félreértett karakterek, a különc kívülállók és a szenvedélyesen független egyéniségek.',
+    about_text2: 'Amikor épp nem az egyetemen tanul, hátizsákot ragad és felszáll egy repülőre — vagy egy asztalhoz kötött hét sütijeit és tökös fűszeres lattéit dolgozza le egy barre órán.',
+    about_btn: 'Írj nekem',
+
+    writing_label: 'Portfólió',
+    writing_title: 'Válogatott írások',
+    writing_sub: 'Esszék és tudományos munkák a gótikus irodalomról, a furcsáról, és azokról a történetekről, amik bennünk maradnak.',
+    piece_read: 'Megnézem',
+
+    quotes_label: 'Amiben Hiszek',
+    quotes_title: 'Néhány Kedvenc Sor',
+    quote1: 'Cseréld ezt egy sorra a saját írásodból, vagy egy idézetre, amit szeretsz.',
+    quote2: 'Egy második idézet — egy kedvenc szerzőtől, vagy egy diák áttörő pillanatától.',
+    quote3: 'Egy harmadik idézet — valami, ami megragadja, miért tanítasz vagy miért írsz.',
+
+    contact_label: 'Kapcsolatfelvétel',
+    contact_title: 'Beszéljünk',
+    contact_sub: 'Legyen szó órákról, írásról vagy együttműködésről — szívesen hallok felőled.',
+    field_name: 'Teljes Név',
+    field_email: 'E-mail Cím',
+    field_message: 'Üzenet',
+    field_msg_ph: 'Mesélj kicsit arról, miért keresel...',
+    btn_send: 'Üzenet Küldése',
+    form_success: 'Köszönöm a megkeresést! Hamarosan válaszolok.',
+
+    footer_tagline: 'Angol Tanár és Író',
+    footer_contact: 'Kapcsolat',
+    footer_follow: 'Kövess',
+    footer_built: 'készítette:',
+  },
+};
