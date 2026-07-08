@@ -335,6 +335,13 @@ main { padding-top: 0; }
 .colophon-links a { color: #b0a394; }
 .colophon-links a:hover { color: #cf6a78; }
 .colophon-sep { margin: 0 0.75rem; color: #6e6459; }
+.social-icons { display: flex; justify-content: center; gap: 0.9rem; margin-top: 1.5rem; }
+.social-icon {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(178,58,72,0.4);
+  display: flex; align-items: center; justify-content: center; color: #cf6a78;
+  transition: all 0.25s ease;
+}
+.social-icon:hover { background: #b23a48; color: #f2e6da; border-color: #b23a48; transform: translateY(-3px); }
 .colophon-note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.88rem; color: #8a7d6e; margin-top: 2.5rem; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; margin-top: 1.5rem; font-size: 0.88rem; text-align: center; }
 .footer-bottom a { color: #cf6a78; }
