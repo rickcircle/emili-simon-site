@@ -6,8 +6,8 @@
 /* === ALAP === */
 body {
   font-family: 'Lato', sans-serif;
-  background: #171214;
-  color: #d9cfc4;
+  background: #1f191b;
+  color: #e2d9cf;
   line-height: 1.75;
 }
 
@@ -40,7 +40,7 @@ body::before {
 body::after {
   content: '';
   position: fixed; inset: 0; z-index: 299; pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.5) 100%);
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.35) 100%);
 }
 
 /* === SCROLL ANIMÁCIÓ === */
@@ -63,7 +63,7 @@ body::after {
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1.2rem 0;
-  background: rgba(23,18,20,0.88);
+  background: rgba(31,25,27,0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(178,58,72,0.2);
   transition: all 0.3s;
@@ -122,7 +122,7 @@ body::after {
 
 .mobile-menu {
   display: none; position: absolute; top: 100%; left: 0; right: 0;
-  background: rgba(23,18,20,0.97); border-bottom: 1px solid rgba(178,58,72,0.2);
+  background: rgba(31,25,27,0.97); border-bottom: 1px solid rgba(178,58,72,0.2);
   padding: 1.5rem 2rem; flex-direction: column; gap: 1.25rem;
 }
 .mobile-menu.open { display: flex; }
@@ -157,16 +157,16 @@ main { padding-top: 0; }
 .btn-sm { padding: 0.55rem 1.4rem; font-size: 0.72rem; }
 
 /* === SECTIONS === */
-.section { padding: 7rem 0; background: #1d1717; position: relative; }
-.section-alt { background: #251e1d; }
+.section { padding: 7rem 0; background: #262020; position: relative; }
+.section-alt { background: #2f2726; }
 .section::before {
   content: '';
   position: absolute; top: -13px; left: 0; right: 0; height: 26px;
-  background: #1d1717;
+  background: #262020;
   clip-path: polygon(0% 100%, 3.5% 0%, 7% 100%, 10.5% 0%, 14% 100%, 17.5% 0%, 21% 100%, 24.5% 0%, 28% 100%, 31.5% 0%, 35% 100%, 38.5% 0%, 42% 100%, 45.5% 0%, 49% 100%, 52.5% 0%, 56% 100%, 59.5% 0%, 63% 100%, 66.5% 0%, 70% 100%, 73.5% 0%, 77% 100%, 80.5% 0%, 84% 100%, 87.5% 0%, 91% 100%, 94.5% 0%, 98% 100%, 100% 0%, 100% 100%);
   z-index: 2;
 }
-.section-alt::before { background: #251e1d; }
+.section-alt::before { background: #2f2726; }
 .section-header { margin-bottom: 4rem; }
 .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.06em; color: #c98a93; margin-bottom: 0.75rem; }
 .section-label::before {
@@ -249,12 +249,22 @@ main { padding-top: 0; }
 }
 .quote-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 780px; margin: 0 auto; }
 .quote-card {
-  background: #221b1a; border: 1px solid rgba(178,58,72,0.18); border-radius: 2px;
+  background: #2c2422; border: 1px solid rgba(178,58,72,0.18); border-radius: 2px;
   padding: 1.85rem; text-align: center; transition: transform 0.3s ease;
   font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.02rem; color: #d9cfc4;
 }
 .quote-card:hover { transform: translateY(-4px) rotate(-1deg); }
 .quote-card:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
+
+/* === PERGAMEN SZEKCIÓ VÁLTOZAT === */
+.section-parchment { background: #ece4d3; }
+.section-parchment::before { background: #ece4d3; }
+.section-parchment .section-label { color: #9c3a48; }
+.section-parchment .chapter-num { color: #9c3a48; }
+.section-parchment .section-title { color: #2a211d; }
+.section-parchment .section-title::after { background: #9c3a48; }
+.section-parchment .section-text { color: #6b5c4f; }
+.section-parchment .quote-card { background: #f5efe1; border-color: rgba(156,58,72,0.25); color: #4a3f37; }
 
 /* === ON THE ROAD (utazás galéria) === */
 .travel-grid { column-count: 3; column-gap: 1.75rem; }
@@ -279,19 +289,19 @@ main { padding-top: 0; }
   border-radius: 2px;
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
-  background: #221b1a;
+  background: #2c2422;
   color: #e8e0d5;
   transition: border-color 0.2s;
   width: 100%;
 }
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #5c5349; }
+.form-group textarea::placeholder { color: #6e6459; }
 .form-group input:focus,
 .form-group textarea:focus { outline: none; border-color: #b23a48; }
-.form-success { background: #221b1a; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #a89d92; }
+.form-success { background: #2c2422; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #b8ad9f; }
 
 /* === FOOTER (kolofon) === */
-.site-footer { background: #120e0f; color: #968b80; padding: 5rem 0 2.5rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
+.site-footer { background: #1a1416; color: #968b80; padding: 5rem 0 2.5rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
 .colophon { text-align: center; }
 .colophon-seal {
   width: 52px; height: 52px; margin: 0 auto; border-radius: 50%;
