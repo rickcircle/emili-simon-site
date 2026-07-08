@@ -24,7 +24,7 @@ export default function Writing() {
   const { t } = useLanguage();
 
   return (
-    <section className="section section-alt" id="writing">
+    <section className="section section-parchment" id="writing">
       <div className="container">
         <div className="section-header reveal">
           <span className="section-label"><span className="chapter-num">II</span>{t.writing_label}</span>

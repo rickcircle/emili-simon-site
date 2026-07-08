@@ -137,15 +137,15 @@ main { padding-top: 0; }
   display: flex; align-items: center; justify-content: center; text-align: center;
   position: relative;
   background:
-    linear-gradient(180deg, rgba(6,5,6,0.55) 0%, rgba(6,5,6,0.75) 55%, rgba(6,5,6,0.95) 100%),
+    linear-gradient(180deg, rgba(6,5,6,0.22) 0%, rgba(6,5,6,0.4) 55%, rgba(6,5,6,0.65) 100%),
     url('/images/hero-bg-gothic.jpg') center 30%/cover no-repeat;
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 2rem; }
-.hero-badge { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; letter-spacing: 0.08em; color: #c98a93; margin-bottom: 1.25rem; }
-.hero-title { font-size: clamp(4rem, 12vw, 8rem); font-weight: 300; letter-spacing: 0.05em; line-height: 1; margin-bottom: 0; color: #f5ece1; font-family: 'Cormorant Garamond', serif; text-shadow: 0 4px 30px rgba(0,0,0,0.6); }
+.hero-badge { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; letter-spacing: 0.08em; color: #c98a93; margin-bottom: 1.25rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.hero-title { font-size: clamp(4rem, 12vw, 8rem); font-weight: 300; letter-spacing: 0.05em; line-height: 1; margin-bottom: 0; color: #f5ece1; font-family: 'Cormorant Garamond', serif; text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 8px 40px rgba(0,0,0,0.6); }
 .hero-rule { width: 90px; height: 1px; background: #b23a48; margin: 1.75rem auto; }
-.hero-sub { font-size: 1rem; color: rgba(245,236,225,0.6); letter-spacing: 0.1em; margin-bottom: 2.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; }
+.hero-sub { font-size: 1rem; color: rgba(245,236,225,0.75); letter-spacing: 0.1em; margin-bottom: 2.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
 .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* === BUTTONS === */
@@ -265,6 +265,12 @@ main { padding-top: 0; }
 .section-parchment .section-title::after { background: #9c3a48; }
 .section-parchment .section-text { color: #6b5c4f; }
 .section-parchment .quote-card { background: #f5efe1; border-color: rgba(156,58,72,0.25); color: #4a3f37; }
+.section-parchment .folio-item { border-color: rgba(156,58,72,0.2); }
+.section-parchment .folio-item:hover { border-color: rgba(156,58,72,0.45); }
+.section-parchment .folio-num { color: rgba(156,58,72,0.3); }
+.section-parchment .folio-title { color: #2a211d; }
+.section-parchment .folio-desc { color: #6b5c4f; }
+.section-parchment .folio-tag { color: #9c3a48; border-color: rgba(156,58,72,0.4); }
 
 /* === ON THE ROAD (utazás galéria) === */
 .travel-grid { column-count: 3; column-gap: 1.75rem; }

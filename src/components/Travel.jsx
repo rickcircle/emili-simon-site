@@ -20,7 +20,7 @@ export default function Travel() {
   const { t } = useLanguage();
 
   return (
-    <section className="section section-alt" id="travel">
+    <section className="section section-parchment" id="travel">
       <div className="container">
         <div className="section-header reveal">
           <span className="section-label"><span className="chapter-num">IV</span>{t.travel_label}</span>
