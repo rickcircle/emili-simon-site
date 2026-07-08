@@ -4,7 +4,7 @@ export default function Quotes() {
   const { t } = useLanguage();
 
   return (
-    <section className="section section-parchment" id="quotes">
+    <section className="section section-purple" id="quotes">
       <div className="container">
         <div className="section-header reveal">
           <span className="section-label"><span className="chapter-num">III</span>{t.quotes_label}</span>

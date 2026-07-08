@@ -7,7 +7,7 @@
 body {
   font-family: 'Lato', sans-serif;
   background: #1f191b;
-  color: #e2d9cf;
+  color: #ece1d3;
   line-height: 1.75;
 }
 
@@ -85,7 +85,7 @@ body::after {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #a89c8f;
+  color: #c9beb0;
   font-family: 'Lato', sans-serif;
 }
 .site-nav a:last-child {
@@ -108,7 +108,7 @@ body::after {
 .lang-switcher { display: flex; gap: 0.5rem; }
 .lang-switcher a {
   font-size: 0.72rem; letter-spacing: 0.1em;
-  color: #6b625c; font-family: 'Lato', sans-serif;
+  color: #8a8079; font-family: 'Lato', sans-serif;
   padding: 3px 7px; border: 1px solid transparent;
   border-radius: 2px; transition: all 0.2s;
 }
@@ -137,15 +137,16 @@ main { padding-top: 0; }
   display: flex; align-items: center; justify-content: center; text-align: center;
   position: relative;
   background:
-    linear-gradient(180deg, rgba(6,5,6,0.22) 0%, rgba(6,5,6,0.4) 55%, rgba(6,5,6,0.65) 100%),
+    radial-gradient(ellipse 60% 55% at 50% 55%, rgba(6,5,6,0.72) 0%, rgba(6,5,6,0.35) 55%, transparent 80%),
     url('/images/hero-bg-gothic.jpg') center 30%/cover no-repeat;
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 1; max-width: 700px; padding: 0 2rem; }
-.hero-badge { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; letter-spacing: 0.08em; color: #c98a93; margin-bottom: 1.25rem; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.hero-badge { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; letter-spacing: 0.08em; color: #e0a5ae; margin-bottom: 1.25rem; text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85); }
 .hero-title { font-size: clamp(4rem, 12vw, 8rem); font-weight: 300; letter-spacing: 0.05em; line-height: 1; margin-bottom: 0; color: #f5ece1; font-family: 'Cormorant Garamond', serif; text-shadow: 0 2px 6px rgba(0,0,0,0.8), 0 8px 40px rgba(0,0,0,0.6); }
 .hero-rule { width: 90px; height: 1px; background: #b23a48; margin: 1.75rem auto; }
-.hero-sub { font-size: 1rem; color: rgba(245,236,225,0.75); letter-spacing: 0.1em; margin-bottom: 2.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+.hero-vine { display: block; margin: 1.5rem auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6)); }
+.hero-sub { font-size: 1rem; color: rgba(250,243,234,0.92); letter-spacing: 0.1em; margin-bottom: 2.5rem; font-style: italic; font-family: 'Cormorant Garamond', serif; text-shadow: 0 1px 3px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.85); }
 .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* === BUTTONS === */
@@ -157,16 +158,30 @@ main { padding-top: 0; }
 .btn-sm { padding: 0.55rem 1.4rem; font-size: 0.72rem; }
 
 /* === SECTIONS === */
-.section { padding: 7rem 0; background: #262020; position: relative; }
-.section-alt { background: #2f2726; }
+.section { padding: 7rem 0; background: #1c1719; position: relative; }
 .section::before {
   content: '';
   position: absolute; top: -13px; left: 0; right: 0; height: 26px;
-  background: #262020;
+  background: #1c1719;
   clip-path: polygon(0% 100%, 3.5% 0%, 7% 100%, 10.5% 0%, 14% 100%, 17.5% 0%, 21% 100%, 24.5% 0%, 28% 100%, 31.5% 0%, 35% 100%, 38.5% 0%, 42% 100%, 45.5% 0%, 49% 100%, 52.5% 0%, 56% 100%, 59.5% 0%, 63% 100%, 66.5% 0%, 70% 100%, 73.5% 0%, 77% 100%, 80.5% 0%, 84% 100%, 87.5% 0%, 91% 100%, 94.5% 0%, 98% 100%, 100% 0%, 100% 100%);
   z-index: 2;
 }
-.section-alt::before { background: #2f2726; }
+
+/* === SZEKCIÓ DRÁGAKŐ TÓNUSOK === */
+.section-bordeaux { background: #23131a; }
+.section-bordeaux::before { background: #23131a; }
+.section-purple { background: #1a1521; }
+.section-purple::before { background: #1a1521; }
+.section-purple::after {
+  content: '';
+  position: absolute; top: 0; right: -40px; width: 220px; height: 100%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 600'%3E%3Cpath d='M50 0 C20 60 80 120 50 180 C20 240 80 300 50 360 C20 420 80 480 50 540 C30 570 60 590 50 600' fill='none' stroke='%23b23a48' stroke-width='2'/%3E%3Ccircle cx='50' cy='90' r='6' fill='%23b23a48'/%3E%3Ccircle cx='50' cy='270' r='6' fill='%23b23a48'/%3E%3Ccircle cx='50' cy='450' r='6' fill='%23b23a48'/%3E%3C/svg%3E") no-repeat center/contain;
+  opacity: 0.1; pointer-events: none; z-index: -1;
+}
+.section-forest { background: #131d1a; }
+.section-forest::before { background: #131d1a; }
+.section-navy { background: #121a26; }
+.section-navy::before { background: #121a26; }
 .section-header { margin-bottom: 4rem; }
 .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; letter-spacing: 0.06em; color: #c98a93; margin-bottom: 0.75rem; }
 .section-label::before {
@@ -178,7 +193,7 @@ main { padding-top: 0; }
 .chapter-num::after { content: '.'; margin-right: 0.4em; }
 .section-title { font-size: clamp(2rem, 4vw, 3.1rem); margin-bottom: 1rem; color: #f2e6da; position: relative; padding-bottom: 1.25rem; }
 .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 70px; height: 1px; background: #b23a48; }
-.section-text { font-size: 1rem; color: #a89c8f; max-width: 560px; }
+.section-text { font-size: 1rem; color: #c2b7a8; max-width: 560px; }
 
 /* === INICIÁLÉ + MARGINÁLIA === */
 .drop-cap::first-letter {
@@ -187,7 +202,7 @@ main { padding-top: 0; }
 }
 .marginalia {
   font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.85rem;
-  color: #9c9187; margin-top: 0.85rem; padding-left: 0.75rem; border-left: 2px solid rgba(178,58,72,0.3);
+  color: #b5a99a; margin-top: 0.85rem; padding-left: 0.75rem; border-left: 2px solid rgba(178,58,72,0.3);
 }
 
 /* === ABOUT === */
@@ -207,28 +222,33 @@ main { padding-top: 0; }
 }
 .about-image::before { top: -20px; left: -20px; }
 .about-image::after { bottom: -20px; right: -20px; transform: rotate(180deg); }
-.about-text p { color: #b8ad9f; }
+.about-text p { color: #d0c4b5; }
 
-/* === WRITING (folio lista) === */
-.folio-list { display: flex; flex-direction: column; margin-top: 1rem; }
-.folio-item {
-  display: flex; align-items: center; gap: 1.5rem;
-  padding: 1.75rem 0; border-bottom: 1px solid rgba(178,58,72,0.15);
-  transition: padding-left 0.25s ease, border-color 0.25s ease;
+/* === WRITING (gótikus könyvespolc) === */
+.bookshelf { display: flex; justify-content: center; align-items: flex-end; gap: 1.75rem; flex-wrap: wrap; margin-top: 2.5rem; padding-bottom: 1.5rem; position: relative; }
+.bookshelf::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(201,162,74,0.5), transparent);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
 }
-.folio-item:first-child { border-top: 1px solid rgba(178,58,72,0.15); }
-.folio-item:hover { padding-left: 0.75rem; border-color: rgba(178,58,72,0.4); }
-.folio-num {
-  font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 2.75rem; line-height: 1;
-  color: rgba(178,58,72,0.35); flex-shrink: 0; width: 3.2rem;
+.book {
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: 150px; padding: 1.1rem 0.85rem;
+  border: 1px solid #c9a24a; border-radius: 2px;
+  text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
 }
-.folio-body { flex: 1; min-width: 0; }
-.folio-title { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #f2e6da; }
-.folio-desc { display: block; font-family: 'Lato', sans-serif; font-size: 0.88rem; color: #9c9187; margin-top: 0.4rem; }
-.folio-tag {
-  flex-shrink: 0; font-family: 'Lato', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: #b23a48; border: 1px solid rgba(178,58,72,0.4); border-radius: 2px; padding: 0.4rem 0.8rem;
-}
+.book:hover { transform: translateY(-10px) rotate(0deg) !important; box-shadow: 0 18px 36px rgba(0,0,0,0.6); }
+.book:nth-child(3n+1) { min-height: 220px; transform: rotate(-3deg); }
+.book:nth-child(3n+2) { min-height: 244px; transform: rotate(2deg); }
+.book:nth-child(3n) { min-height: 230px; transform: rotate(-1.5deg); }
+.book-1 { background: #4a1520; }
+.book-2 { background: #173626; }
+.book-3 { background: #141c33; }
+.book-band { border-top: 1px solid #c9a24a; border-bottom: 1px solid #c9a24a; padding: 0.4rem 0; text-align: center; }
+.book-tag { font-family: 'Lato', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: #e0b46a; }
+.book-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.25; color: #f3e4c6; text-align: center; margin: 1rem 0; }
+.book-link { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.8rem; color: #c9a24a; text-align: center; }
 
 /* === QUOTES (editoriális, kiemelt idézet) === */
 .featured-quote {
@@ -251,26 +271,10 @@ main { padding-top: 0; }
 .quote-card {
   background: #2c2422; border: 1px solid rgba(178,58,72,0.18); border-radius: 2px;
   padding: 1.85rem; text-align: center; transition: transform 0.3s ease;
-  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.02rem; color: #d9cfc4;
+  font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.02rem; color: #ece1d3;
 }
 .quote-card:hover { transform: translateY(-4px) rotate(-1deg); }
 .quote-card:nth-child(2):hover { transform: translateY(-4px) rotate(1deg); }
-
-/* === PERGAMEN SZEKCIÓ VÁLTOZAT === */
-.section-parchment { background: #ece4d3; }
-.section-parchment::before { background: #ece4d3; }
-.section-parchment .section-label { color: #9c3a48; }
-.section-parchment .chapter-num { color: #9c3a48; }
-.section-parchment .section-title { color: #2a211d; }
-.section-parchment .section-title::after { background: #9c3a48; }
-.section-parchment .section-text { color: #6b5c4f; }
-.section-parchment .quote-card { background: #f5efe1; border-color: rgba(156,58,72,0.25); color: #4a3f37; }
-.section-parchment .folio-item { border-color: rgba(156,58,72,0.2); }
-.section-parchment .folio-item:hover { border-color: rgba(156,58,72,0.45); }
-.section-parchment .folio-num { color: rgba(156,58,72,0.3); }
-.section-parchment .folio-title { color: #2a211d; }
-.section-parchment .folio-desc { color: #6b5c4f; }
-.section-parchment .folio-tag { color: #9c3a48; border-color: rgba(156,58,72,0.4); }
 
 /* === ON THE ROAD (utazás galéria) === */
 .travel-grid { column-count: 3; column-gap: 1.75rem; }
@@ -287,7 +291,7 @@ main { padding-top: 0; }
 /* === CONTACT FORM === */
 .booking-form { max-width: 620px; margin-top: 2.5rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
-.form-group label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #9c9187; font-family: 'Lato', sans-serif; }
+.form-group label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #b5a99a; font-family: 'Lato', sans-serif; }
 .form-group input,
 .form-group textarea {
   padding: 0.85rem 1rem;
@@ -296,18 +300,18 @@ main { padding-top: 0; }
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
   background: #2c2422;
-  color: #e8e0d5;
+  color: #ece1d3;
   transition: border-color 0.2s;
   width: 100%;
 }
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #6e6459; }
+.form-group textarea::placeholder { color: #8a7d6e; }
 .form-group input:focus,
 .form-group textarea:focus { outline: none; border-color: #b23a48; }
-.form-success { background: #2c2422; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #b8ad9f; }
+.form-success { background: #2c2422; border-left: 3px solid #b23a48; padding: 1.5rem 2rem; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: #d0c4b5; }
 
 /* === FOOTER (kolofon) === */
-.site-footer { background: #1a1416; color: #968b80; padding: 5rem 0 2.5rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
+.site-footer { background: #140f11; color: #b0a394; padding: 5rem 0 2.5rem; margin-top: 0; border-top: 1px solid rgba(178,58,72,0.15); }
 .colophon { text-align: center; }
 .colophon-seal {
   width: 52px; height: 52px; margin: 0 auto; border-radius: 50%;
@@ -316,12 +320,12 @@ main { padding-top: 0; }
 }
 .colophon .hero-rule { margin: 1.5rem auto; }
 .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: #f2e6da; }
-.colophon-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #9c9187; margin-top: 0.4rem; }
+.colophon-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #b5a99a; margin-top: 0.4rem; }
 .colophon-links { margin-top: 1.75rem; font-size: 0.85rem; }
-.colophon-links a { color: #968b80; }
+.colophon-links a { color: #b0a394; }
 .colophon-links a:hover { color: #cf6a78; }
-.colophon-sep { margin: 0 0.75rem; color: #5c5349; }
-.colophon-note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.8rem; color: #6e6459; margin-top: 2.5rem; }
+.colophon-sep { margin: 0 0.75rem; color: #6e6459; }
+.colophon-note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 0.8rem; color: #8a7d6e; margin-top: 2.5rem; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; margin-top: 1.5rem; font-size: 0.8rem; text-align: center; }
 .footer-bottom a { color: #cf6a78; }
 
@@ -335,9 +339,8 @@ main { padding-top: 0; }
 @media (max-width: 640px) {
   .site-nav { display: none; }
   .hamburger { display: flex; }
-  .folio-item { gap: 1rem; }
-  .folio-num { font-size: 2rem; width: 2.2rem; }
-  .folio-title { font-size: 1.2rem; }
+  .book { width: 130px; }
+  .bookshelf { gap: 1.1rem; }
   .hero-title { font-size: 3.5rem; }
   .section { padding: 4rem 0; }
   .quote-row { grid-template-columns: 1fr; }

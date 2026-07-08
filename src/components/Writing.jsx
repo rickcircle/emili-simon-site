@@ -24,22 +24,21 @@ export default function Writing() {
   const { t } = useLanguage();
 
   return (
-    <section className="section section-parchment" id="writing">
+    <section className="section section-bordeaux" id="writing">
       <div className="container">
         <div className="section-header reveal">
           <span className="section-label"><span className="chapter-num">II</span>{t.writing_label}</span>
           <h2 className="section-title">{t.writing_title}</h2>
           <p className="section-text">{t.writing_sub}</p>
         </div>
-        <div className="folio-list reveal">
+        <div className="bookshelf reveal">
           {pieces.map((piece, i) => (
-            <a className="folio-item" key={piece.file} href={piece.file} target="_blank" rel="noopener noreferrer">
-              <span className="folio-num">{String(i + 1).padStart(2, '0')}</span>
-              <span className="folio-body">
-                <span className="folio-title">{piece.title}</span>
-                <span className="folio-desc">{piece.description}</span>
+            <a className={`book book-${(i % 3) + 1}`} key={piece.file} href={piece.file} target="_blank" rel="noopener noreferrer">
+              <span className="book-band">
+                <span className="book-tag">{piece.tag}</span>
               </span>
-              <span className="folio-tag">{piece.tag}</span>
+              <span className="book-title">{piece.title}</span>
+              <span className="book-link">{t.piece_read} &rarr;</span>
             </a>
           ))}
         </div>
